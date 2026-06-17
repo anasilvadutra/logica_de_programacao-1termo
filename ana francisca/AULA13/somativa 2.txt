@@ -256,43 +256,6 @@
 
 # 8. Cálculo de Descarte: Peça o total de peças produzidas e o total de defeituosas. Se o descarte for maior que 5% do total, exiba "Revisar Processo", caso contrário,"Processo Otimizado".
 
-
-# import tkinter as tk
-# from tkinter import messagebox
-
-# def calcular_descarte():
-#     total_pecas = int(entry_total_pecas.get())
-#     pecas_defeituosas = int(entry_pecas_defeituosas.get())
-#     taxa_descarte = (pecas_defeituosas / total_pecas) * 100 if total_pecas > 0 else None
-
-#     if taxa_descarte is not None:
-#         if taxa_descarte > 5:
-#             messagebox.showwarning("Cálculo de Descarte", f"Revisar Processo! Taxa de descarte: {taxa_descarte}%")
-#         else:
-#             messagebox.showinfo("Cálculo de Descarte", f"Processo Otimizado! Taxa de descarte: {taxa_descarte}%")
-#     else:
-#         messagebox.showwarning("Erro", "Por favor, preencha ambos os campos corretamente.")
-# # Configuração da janela
-# janela = tk.Tk()
-# janela.title("Cálculo de Descarte")
-# janela.geometry("300x200")
-# # Widgets
-
-# label_total_pecas = tk.Label(janela, text="Total de peças produzidas:")
-# label_total_pecas.pack(pady=5)
-# entry_total_pecas = tk.Entry(janela)
-# entry_total_pecas.pack(pady=5)
-# label_pecas_defeituosas = tk.Label(janela, text="Total de peças defeituosas:")
-# label_pecas_defeituosas.pack(pady=5)
-# entry_pecas_defeituosas = tk.Entry(janela)
-# entry_pecas_defeituosas.pack(pady=5)
-# button_calcular = tk.Button(janela, text="Calcular Descarte", command=calcular_descarte)
-# button_calcular.pack(pady=10)
-# button_fechar = tk.Button(janela, text="Fechar", command=janela.destroy)
-# button_fechar.pack(pady=10)
-# janela.mainloop()
-
-
 # 9. Validação de Medida: Uma peça deve ter entre 9.8mm e 10.2mm. Peça a medida e diga se está dentro da tolerância, acima ou abaixo.
 
 # import tkinter as tk
@@ -341,7 +304,7 @@
 
 # janela = tk.Tk()
 # janela.title("Contagem Regressiva")
-# janela.geometry("800x400")
+# janela.geometry("300x200")
 # label_tempo = tk.Label(janela, text="A prensa será ativada em 10 segundos")
 
 # label_tempo.pack(pady=5)
