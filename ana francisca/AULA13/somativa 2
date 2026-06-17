@@ -1,3 +1,4 @@
+# SOMATIVA 
 # 1. Registro de Operador: Peça o nome do operador e o turno (A, B ou C). 
 # Exiba:
 # "Operador [Nome] registrado no Turno [Turno]. Boa jornada!"
@@ -87,7 +88,7 @@
 
 # janela = tk.Tk()
 # janela.geometry("400x400")
-# janela.configure(bg="#79A1EB")
+# janela.configure(bg="#79DEEB")
 
 # lbl_PSI_umidade = tk.Label(janela, text="Digite o valor em bar ")
 # lbl_PSI_umidade.grid(row=1, column= 0, padx=10, pady=10)
@@ -174,16 +175,17 @@
 # motor_temperatura = tk.Entry(janela_temperatura, font= ("Arial", 12), width=53)
 # motor_temperatura.grid(row=2, column=1, pady=10, padx=10)
 
-# btn_enviar_mensagem = tk.Button(janela_temperatura, text="Enviar Registro", command=temperatura, bg = "#fff350", fg= "Black")
+# btn_enviar_mensagem = tk.Button(janela_temperatura, text="Enviar Registro", command=temperatura, bg = "#50fff6", fg= "Black")
 # btn_enviar_mensagem.grid(row=6, column=1, pady=10, padx=10)
 
-# btn_clicar_fechar = tk.Button(janela_temperatura, text="Fechar Janela", command=janela_temperatura.destroy, bg = "#ebde35", fg = "Black")
+# btn_clicar_fechar = tk.Button(janela_temperatura, text="Fechar Janela", command=janela_temperatura.destroy, bg = "#13e9d7", fg = "Black")
 # btn_clicar_fechar.grid(row=7, column=1, pady=10, padx=10)
 
 # janela_temperatura.mainloop()
 
 # 6. Classificador de Lotes: O usuário insere o código do produto. Se começar com "A",
 # exiba "Alimentos". Se "E", "Eletrônicos". Para qualquer outro, "Desconhecido".
+
 # import tkinter as tk
 # from tkinter import messagebox, ttk
 
@@ -216,3 +218,104 @@
 
 # janela_lotes.mainloop()
  
+# 7. Segurança de Operação: A máquina só liga se o sensor_porta == "fechada" E o botao_emergencia == "desligado". Peça esses dois inputs e diga se a máquina pode iniciar. 
+
+# import tkinter as tk
+# from tkinter import messagebox
+        
+# messagebox.showinfo("Operação", f"Para ligar a máquina, digite o código (fechada) para o sensor e (desligado) para o botão de emergência")
+# def maquina():
+#     sensor_porta = entry_sensor_porta.get()
+#     botao_emergencia = entry_botao_emergencia.get()
+#     if sensor_porta == "fechado" and botao_emergencia == "desligado":
+#         messagebox.showinfo("Máquina", "A máquina foi ligada com sucesso!")
+#     else:
+#         messagebox.showwarning("Erro", "Digite o comando certo!")
+
+# janela = tk.Tk()
+# janela.title("Classificador de Lotes")
+# janela.geometry("300x300")
+
+# label_sensor_porta = tk.Label(janela, text="Digite o comando:",  bg = "#f700ff", fg = "Black")
+# label_sensor_porta.pack(pady=5)
+# entry_sensor_porta = tk.Entry(janela)
+# entry_sensor_porta.pack(pady=5)
+
+# label_botao_emergencia = tk.Label(janela, text="Digite o comando:",  bg = "#db18bb", fg = "Black")
+# label_botao_emergencia.pack(pady=5)
+# entry_botao_emergencia = tk.Entry(janela)
+# entry_botao_emergencia.pack(pady=5)
+
+
+# button_classificar = tk.Button(janela, text="Executar comando", command=maquina,  bg = "#cc1ec3", fg = "Black")
+# button_classificar.pack(pady=10)
+# button_fechar = tk.Button(janela, text="Fechar", command=janela.destroy,  bg = "#c02699", fg = "Black")
+# button_fechar.pack(pady=10) 
+
+# janela.mainloop()
+
+# 8. Cálculo de Descarte: Peça o total de peças produzidas e o total de defeituosas. Se o descarte for maior que 5% do total, exiba "Revisar Processo", caso contrário,"Processo Otimizado".
+
+# 9. Validação de Medida: Uma peça deve ter entre 9.8mm e 10.2mm. Peça a medida e diga se está dentro da tolerância, acima ou abaixo.
+
+# import tkinter as tk
+# from tkinter import messagebox
+
+
+# def medida():
+#     medida_peça = float(entry_medida_peça.get())
+#     if medida_peça < 9.8:
+#         messagebox.showwarning("Medida", "A peça está abaixo da tolerância")
+#     elif medida_peça > 9.8 and medida_peça < 10.2:
+#         messagebox.showinfo("Medida", "A peça está dentro da tolerância")
+#     elif medida_peça > 10.2:
+#         messagebox.showwarning("Medida", "A peça está acima da tolerância.")
+
+# janela = tk.Tk()
+# janela.title("Validação de Medida")
+# janela.geometry("300x200")
+# label_medida_peça = tk.Label(janela, text="Digite a medida da peça em mm:", bg = "#f7ff86", fg = "Black")
+# label_medida_peça.pack(pady=5)
+
+# entry_medida_peça = tk.Entry(janela)
+# entry_medida_peça.pack(pady=5)
+
+# button_verificar = tk.Button(janela, text="Verificar Medida", command=medida, bg = "#eef58e", fg = "Black")
+# button_verificar.pack(pady=10)
+
+# button_fechar = tk.Button(janela, text="Fechar", command=janela.destroy, bg = "#fffd9b", fg = "Black")
+# button_fechar.pack(pady=10)
+
+# janela.mainloop()
+
+# 10.Contagem Regressiva de Setup: Use um for para fazer uma contagem regressiva de 10 até 1 para o início de uma prensa, e finalize com "Prensa Ativada!".
+
+
+# import tkinter as tk
+# from tkinter import messagebox
+
+# def contagem_regressiva():
+#     tempo = 10
+#     for i in range(tempo, -1, -1):
+#         label_contagem.config(text=f"Prensa ativada em: {i} segundos")
+#         janela.update()
+#         janela.after(1000)
+#     messagebox.showinfo("Contagem Regressiva", "Prensa Ativada!")
+
+# janela = tk.Tk()
+# janela.title("Contagem Regressiva")
+# janela.geometry("300x200")
+# label_tempo = tk.Label(janela, text="A prensa será ativada em 10 segundos")
+
+# label_tempo.pack(pady=5)
+# button_iniciar = tk.Button(janela, text="Iniciar Contagem", command=contagem_regressiva, bg = "#fdbc68", fg = "Black")
+
+# button_iniciar.pack(pady=10)
+# label_contagem = tk.Label(janela, text="")
+
+# label_contagem.pack(pady=5)
+# button_fechar = tk.Button(janela, text="Fechar", command=janela.destroy, bg = "#f8c475", fg = "Black")
+
+# button_fechar.pack(pady=10)
+
+# janela.mainloop()    
